@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/commonbgcolor"
+    android:orientation="vertical"
+    tools:context="imgconvertt.compressimg.convrtformat.activities.MyCreationnActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/bgtoolbar"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:navigationIcon="@drawable/ic_back">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/prompt_medium"
+                android:gravity="center|left"
+                android:text="@string/mycreation"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_10ssp" />
+
+            <ImageView
+                android:id="@+id/ivSelectAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="end|center"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:padding="@dimen/_6sdp"
+                android:src="@drawable/all_select_press_unpress"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:id="@+id/ivDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="end|center"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:layout_toLeftOf="@+id/ivSelectAll"
+                android:backgroundTint="@color/white"
+                android:background="@drawable/icon_bg_press_unpress"
+                android:padding="@dimen/_6sdp"
+                android:src="@drawable/ic_delete"
+                android:visibility="gone"
+                app:tint="@color/colorPrimary" />
+
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--tablayout-->
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_gravity="center"
+        android:layout_marginVertical="@dimen/_14sdp"
+
+        android:background="@color/transparent"
+        app:tabBackground="@drawable/tab_color_selector"
+        app:tabGravity="center"
+        app:tabIndicator="@color/transparent"
+        app:tabIndicatorGravity="bottom"
+        app:tabMode="scrollable"
+        app:tabPaddingEnd="@dimen/_16sdp"
+        app:tabPaddingStart="@dimen/_16sdp"
+        app:tabRippleColor="@null"
+        app:tabSelectedTextColor="@color/tablayout_selectedxt"
+        app:tabTextAppearance="@style/MyCustomTextAppearance"
+        app:tabTextColor="@color/deselectedtextcolor" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/llMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_42sdp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:visibility="gone">
+
+                    <io.github.florent37.shapeofview.shapes.RoundRectView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:shape_roundRect_bottomLeftRadius="@dimen/_10sdp"
+                        app:shape_roundRect_bottomRightRadius="@dimen/_10sdp"
+                        app:shape_roundRect_topLeftRadius="@dimen/_10sdp"
+                        app:shape_roundRect_topRightRadius="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#F5F5F5"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_15sdp"
+                                android:src="@drawable/ic_search" />
+
+                            <EditText
+                                android:id="@+id/etSearch"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/prompt_bold"
+                                android:hint="Search you file here..."
+                                android:singleLine="true"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/_12ssp" />
+                        </LinearLayout>
+                    </io.github.florent37.shapeofview.shapes.RoundRectView>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="wrap_content" />
+
+                    <io.github.florent37.shapeofview.shapes.RoundRectView
+                        android:layout_width="@dimen/_42sdp"
+                        android:layout_height="@dimen/_42sdp"
+                        app:shape_roundRect_bottomLeftRadius="@dimen/_10sdp"
+                        app:shape_roundRect_bottomRightRadius="@dimen/_10sdp"
+                        app:shape_roundRect_topLeftRadius="@dimen/_10sdp"
+                        app:shape_roundRect_topRightRadius="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/sort_background_press_unpress"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:src="@drawable/ic_sort" />
+                        </LinearLayout>
+                    </io.github.florent37.shapeofview.shapes.RoundRectView>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:fontFamily="@font/prompt_regular"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:text="@string/longpressinstruction"
+                    android:textColor="@color/textLightColor"
+                    android:textSize="@dimen/_10ssp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvAllPdfs"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    style="@style/VerticalScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    tools:listitem="@layout/rowlayout_mycreationlist" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:src="@drawable/emptyimg" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/prompt_medium"
+                    android:gravity="center"
+                    android:text="@string/notfound"
+                    android:textColor="@color/titleTextColor"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:fontFamily="@font/prompt_regular"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:text="@string/notfound2"
+                    android:textColor="@color/titleTextColor"
+                    android:textSize="@dimen/_10ssp" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/colorPrimary"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>
